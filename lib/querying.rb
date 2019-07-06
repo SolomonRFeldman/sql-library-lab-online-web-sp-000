@@ -22,6 +22,7 @@ def select_series_title_with_most_human_characters
   'SELECT series.title, series.id
   FROM characters
   INNER JOIN series ON series.id = characters.series_id
+  WHERE characters.species = "human
   GROUP BY series.id'
 end
 
